@@ -194,6 +194,12 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        \SocialiteProviders\Manager\ServiceProvider::class,
+
+        /**
+        * Socialite
+        */
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
 
@@ -208,8 +214,12 @@ return [
     |
     */
 
-    'aliases' => Facade::defaultAliases()->merge([
+    'aliases' =>  Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
+
+    'aliases' => [
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        ],
 
 ];

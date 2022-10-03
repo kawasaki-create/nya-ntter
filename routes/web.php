@@ -17,4 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home','App\Http\Controllers\HomeController@tsubuyaki');
+Route::get('home','App\Http\Controllers\HomeController@tsubuyaki');
+Route::get('twitter', 'App\Http\Controllers\TwitterController@index');
+Route::get('auto/twitter/callback', 'App\Http\Controllers\TwitterController@callback');
+Route::get('twitter/mypage', 'App\Http\Controllers\TwitterController@login')->name('twitter.login');

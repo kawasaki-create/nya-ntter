@@ -13,5 +13,10 @@
     </div>
     <h1>ここにつぶやきを流す</h1>
     <p>{{$今}}</p>
+    <div class="footer">
+        <button type="button">
+            更新
+        </button>
+    </div>
 </body>
 </html>
