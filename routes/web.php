@@ -19,5 +19,5 @@ Route::get('/', function () {
 
 Route::get('home','App\Http\Controllers\HomeController@tsubuyaki');
 Route::get('twitter', 'App\Http\Controllers\TwitterController@index');
-Route::get('auto/twitter/callback', 'App\Http\Controllers\TwitterController@callback');
-Route::get('twitter/mypage', 'App\Http\Controllers\TwitterController@login')->name('twitter.login');
+Route::get('auto/twitter/callback', [App\Http\Controllers\TwitterLoginController::class, 'handleProviderCallback']);
+Route::get('twitter/login', [App\Http\Controllers\TwitterController::class, 'redirectToProvider']);
